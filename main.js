@@ -5,35 +5,49 @@ $(document).ready(function(){
   $(".next").click(function(){
     nextImage();
   });
-// ESERCIZIO BONUS CHE SICURAMENTE NON SI FA COSI 
-  $(".a").click(function(){
-    var image = $(".images img.active");
-    image.removeClass("active");
-    $(".nav i.active").removeClass("active");
-    $(".a").addClass("active");
-    $("#primo").addClass("active");
-  });
-  $(".b").click(function(){
-    var image = $(".images img.active");
-    image.removeClass("active");
-    $(".nav i.active").removeClass("active");
-    $(".b").addClass("active");
-    $("#sec").addClass("active");
-  });
-  $(".c").click(function(){
-    var image = $(".images img.active");
-    image.removeClass("active");
-    $(".nav i.active").removeClass("active");
-    $(".c").addClass("active");
-    $("#ter").addClass("active");
-  });
-  $(".d").click(function(){
-    var image = $(".images img.active");
-    image.removeClass("active");
-    $(".nav i.active").removeClass("active");
-    $(".d").addClass("active");
-    $("#qua").addClass("active");
-  });
+// ESERCIZIO BONUS CHE SICURAMENTE NON SI FA COSI
+  // $(".a").click(function(){
+  //   var image = $(".images img.active");
+  //   image.removeClass("active");
+  //   $(".nav i.active").removeClass("active");
+  //   $(".a").addClass("active");
+  //   $("#primo").addClass("active");
+  // });
+  // $(".b").click(function(){
+  //   var image = $(".images img.active");
+  //   image.removeClass("active");
+  //   $(".nav i.active").removeClass("active");
+  //   $(".b").addClass("active");
+  //   $("#sec").addClass("active");
+  // });
+  // $(".c").click(function(){
+  //   var image = $(".images img.active");
+  //   image.removeClass("active");
+  //   $(".nav i.active").removeClass("active");
+  //   $(".c").addClass("active");
+  //   $("#ter").addClass("active");
+  // });
+  // $(".d").click(function(){
+  //   var image = $(".images img.active");
+  //   image.removeClass("active");
+  //   $(".nav i.active").removeClass("active");
+  //   $(".d").addClass("active");
+  //   $("#qua").addClass("active");
+  // });
+
+
+  
+// SOLUZIONE FATTA IN CLASSE
+
+$(".nav i").click (
+  function(){
+    var posizione = $(this).index();
+    $(".images img").removeClass("active");
+    $(".images img").eq(posizione).addClass("active");
+    $(".nav i").removeClass("active");
+    $(".nav i").eq(posizione).addClass("active");
+  }
+);
 
 
 
